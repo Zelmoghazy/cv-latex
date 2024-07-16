@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!resume.tex
+!*.png
+
+# ...even if they are in subdirectories
+!*/

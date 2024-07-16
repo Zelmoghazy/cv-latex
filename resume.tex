@@ -1,0 +1,243 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{graphicx}
+
+
+\newcommand*{\img}[1]{%
+    \raisebox{-.3\baselineskip}{%
+        \includegraphics[
+        height=\baselineskip,
+        width=\baselineskip,
+        keepaspectratio,
+        ]{#1}%
+    }%
+}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Zeyad Ahmed Ibrahim} \\ \vspace{1pt}
+    \small \img{phone.png} 01020383801 $|$ \href{mailto:zelmoghazy@gmail.com}{\img{email.png} \underline{zelmoghazy@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/zeyad-el-moghazy/}{\img{linkedin.png} \underline{linkedin.com/in/zeyad-el-moghazy}} $|$
+    \href{https://github.com/Zelmoghazy}{\img {github} \underline{github.com/Zelmoghazy}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Faculty of Engineering Ain Shams University}{2019 -- 2024}
+      {Computer and Systems Engineering}{CGPA : 3.1}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Courses : }Structured and Object-oriented programming - Advanced Database Systems - Operating Systems - Parallel and Distributed Systems - Software Testing - Design and Analysis of Algorithms - Discrete Mathematics - Software Design Patterns -  Fundamentals of Big-Data Analytics - Compiler Design - Computer Networks - Computer Architecture - Computer Organization - Real-Time and Embedded Systems Design}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Digital Twin of Matgr DB4 Autonomous Golf Car (GP)} $|$ \emph{C, ESP-IDF, Ethernet, CAN, LWIP, FreeRTOS}}{}
+        \resumeItemListStart
+            \resumeItem{Managed physical interfacing with the real autonomous golf car by developing an ESP32-based gateway to facilitate bi-directional communication between the virtual twin environment and the physical golf car.}
+            \resumeItem{Utilized the ESP32's internal MAC alongside an external PHY module (LAN8720) to establish a reliable Ethernet wired network with a consistent low latency}
+            \resumeItem{Established a Controller Area Network (CAN) bus architecture between the TI's C2000 powered Launchpad embedded in the golf car and the ESP32 gateway to facilitate real-time exchange of control signals “set points” and operational data between the car’s embedded system and the digital twin environment.}
+            \resumeItem{Employed the LWIP (Lightweight IP) Embedded TCP/IP stack for efficient network communication and utilized MQTT as an application layer protocol, unifying communication interface accross different channels.}
+            \resumeItem{Developed a solution to upload collected data to the cloud, ensuring accessibility and storage.}
+            \resumeItem{Provided multiple communication options, including both wired and wireless networks, to ensure flexibility and reliability.}
+            \resumeItem{Collaborated with the application team to integrate the digital twin with their systems, using ROS (Robot Operating System).}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/Zelmoghazy/XML-Parser}{\underline{XML Parser and Social Network Analysis}}} $|$ \emph{C++, Qt Framework}}{}
+        \resumeItemListStart
+            \resumeItem{Parse, Validate, Compress, Correct and Format XML files}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/Zelmoghazy/CPU-Scheduling-Algorithms}{\underline{CPU Scheduling Algorithms Simulator}}} $|$ \emph{Java, JavaFX}}{}
+        \resumeItemListStart
+            \resumeItem{Implemented multiple scheduling algorithms: FCFS, SJF (preemptive and non-preemptive), Round Robin, priority-based preemptive, and priority-based non-preemptive.}
+            \resumeItem{Created both static and dynamic visualizations.}
+            \resumeItem{Calculated key statistics including arrival time, burst time, and waiting time.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/Zelmoghazy/TINY_Scanner_Parser}{\underline{TINY Language Scanner and Parser}}} $|$ \emph{C, C++, ImGui}}{}
+        \resumeItemListStart
+            \resumeItem{Implemented a Lexer and a parser for the TINY language.}
+            \resumeItem{Created a GUI to visualize the syntax tree of different programs}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/Zelmoghazy/Gobblet}{\underline{Gobblet}}} $|$ \emph{Python, PyGame}}{}
+        \resumeItemListStart
+            \resumeItem{A Python implementation of the Gobblet game with an AI opponent using Minimax and Alpha-Beta Pruning}
+            \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/Zelmoghazy/House-Pricing-Prediction}{\underline{House Pricing Prediction}}} $|$ \emph{Python}}{}
+        \resumeItemListStart
+            \resumeItem{Multiple Linear Regression from scratch using Python}
+            \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/Zelmoghazy/OnlineStoreDataBase}{\underline{E-Commerce Database}}} $|$ \emph{MySQL}}{}
+        \resumeItemListStart
+            \resumeItem{Design EER Diagram, Map it into relational schemas and implement it using MySQL.}
+            \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/Zelmoghazy/Power-Window-Controller}{\underline {Power Window Controller}}} $|$ \emph{C, FreeRTOS}}{}
+        \resumeItemListStart
+            \resumeItem{Developed an event-driven framework on top of FreeRTOS for the TM4C123 microcontroller.}
+            \resumeItem{Designed and implemented an event-driven state machine for project execution.}
+        \resumeItemListEnd
+            \resumeSubHeadingListEnd
+            
+            %
+            
+%-----------EXPERIENCE-----------
+\section{Courses}
+\resumeSubHeadingListStart
+            
+    \resumeSubheading
+      {\href{https://github.com/Zelmoghazy/Mastering_Embedded_Systems}{\underline{Mastering Embedded Systems Diploma}}}{}
+      {Eng. Keroles Shenouda}{}
+      \resumeItemListStart
+        \resumeItem{C Programming - Embedded C - System Architecture - MCU Fundamentals -  MCU Interfacing - ARM Architecture - RTOS}
+      \resumeItemListEnd
+    \resumeSubheading
+      {{\href{https://coursera.org/share/f78300c5674c93a0e320a5bc1c266409}{\underline{Machine Learning Specialization}}}}{}
+      {Andrew Ng [Coursera]}{}
+      \resumeItemListStart
+        \resumeItem{Supervised Machine Learning -
+        Advanced Learning Algorithms - Unsupervised Learning}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Rust Fundamentals }{}
+      {[Pluralsight]}{}
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++,Java, Python, MySQL, JavaScript} \\
+     \textbf{Developer Tools}{: Git, Docker, VS Code, Visual Studio} \\
+     \textbf{Libraries}{: Pandas, NumPy, Matplotlib}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
